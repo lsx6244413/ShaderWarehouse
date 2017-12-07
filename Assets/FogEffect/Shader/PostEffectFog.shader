@@ -4,8 +4,9 @@
 	{
 		_MainTex ("Texture", 2D) = "white" {}
 		_FogColor("Fog Color", Color) = (0.3, 0.4, 0.7, 1.0)
-		_FogStart("Fog Start", float) = 0
-		_Density("Density", float) = 0
+		_FogStart("Fog Start", Range(500, 1000)) = 500
+		_FogEnd("Fog End", Range(-500, 500)) = 0
+		_Density("Density", Range(0, 1)) = 0
 
 	}
 	SubShader
@@ -18,16 +19,9 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			// make fog work
-			#pragma multi_compile_fog
-			
+			// make fog work			
 			#include "UnityCG.cginc"
 
-			struct appdata
-			{
-				float4 vertex : POSITION;
-				float2 uv : TEXCOORD0;
-			};
 
 			struct v2f
 			{
@@ -38,6 +32,7 @@
 			};
 
 			float _FogStart;
+			float _FogEnd;
 			float _Density;
 			fixed4 _FogColor;
 			float4 _MainTex_ST;
@@ -46,14 +41,6 @@
 			sampler2D _MainTex;
 			sampler2D _CameraDepthTexture;
 			
-			/*v2f vert (appdata v)
-			{
-				v2f o;
-				o.vertex = UnityObjectToClipPos(v.vertex);
-				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				UNITY_TRANSFER_FOG(o,o.vertex);
-				return o;
-			}*/
 
 			v2f vert (appdata_img v)
 			{
@@ -61,8 +48,8 @@
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.texcoord.xy;
 
-				int xx = (int)v.vertex.x;
-				int yy = (int)v.vertex.y;
+				int xx = (int)v.texcoord.x;
+				int yy = (int)v.texcoord.y;
 				int z = abs (3 - xx - 3 * yy);
 				o.interpolatedRay = _FrustumCornersWS[z];
 
@@ -80,7 +67,7 @@
 				float depth = Linear01Depth ( SAMPLE_DEPTH_TEXTURE ( _CameraDepthTexture, UnityStereoScreenSpaceUVAdjust(i.uv, _CameraDepthTexture_ST)));
 				float3 worldPos = ( depth * i.interpolatedRay ).xyz + _WorldSpaceCameraPos;
 
-				return lerp (tex2D (_MainTex, i.uv), _FogColor, saturate(exp(worldPos.y - _FogStart) * _Density));
+				return lerp (tex2D (_MainTex, i.uv), _FogColor, saturate((_FogStart - worldPos.y) / (_FogStart - _FogEnd) * _Density));
 			}
 			ENDCG
 		}
