@@ -23,7 +23,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Density: 4.08
-    - _FogStart: 4.23
+    - _Density: 1
+    - _FogEnd: -500
+    - _FogStart: 500
     m_Colors:
     - _FogColor: {r: 0.38300171, g: 0.42879543, b: 0.5661765, a: 1}
