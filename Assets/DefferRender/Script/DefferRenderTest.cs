@@ -34,6 +34,12 @@ public class DefferRenderTest : MonoBehaviour {
         }
         var camCO = GetComponent<Camera>();
         //camCO.depthTextureMode |= DepthTextureMode.DepthNormals;
+        float[][] ft = new float[2][];
+        for (int i = 0; i < 2; i++)
+        {
+            ft[i] = new float[3];
+        }
+        Debug.LogWarning(ft.Length + "  " + ft[0].Length);
 	}
 	
 	// Update is called once per frame

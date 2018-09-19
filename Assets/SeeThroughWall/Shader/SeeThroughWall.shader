@@ -16,6 +16,7 @@ Shader "chenjd/SeeThroughWall"
 		Pass
 		{
 			ZTest Greater
+			ZWrite off
 			Blend One One
 
 			CGPROGRAM

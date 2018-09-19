@@ -30,7 +30,7 @@
         //计算uv到中间点的向量(向外扩，反过来就是向里缩)  
         float2 dv = _startPos.xy - i.uv;  
         //按照屏幕长宽比进行缩放  
-        dv = dv * float2(_ScreenParams.x / _ScreenParams.y, 1);  
+        dv = dv ;//* float2(_ScreenParams.x / _ScreenParams.y, 1);  
         //计算像素点距中点的距离  
         float dis = sqrt(dv.x * dv.x + dv.y * dv.y);  
         //用sin函数计算出波形的偏移值factor  
@@ -42,7 +42,7 @@
         //归一化  
         float2 dv1 = normalize(dv);  
         //计算每个像素uv的偏移值  
-        float2 offset = dv1  * sinFactor * discardFactor;  
+        float2 offset = dv1 * sinFactor * discardFactor;  
         //像素采样时偏移offset  
         float2 uv = offset + i.uv;  
         return tex2D(_MainTex, uv);   

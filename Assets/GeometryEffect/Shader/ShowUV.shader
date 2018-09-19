@@ -1,4 +1,4 @@
-Shader "Unlit/ShowUV" 
+Shader "Custom/ShowUV" 
 {
 	Properties 
 	{
@@ -51,7 +51,7 @@ Shader "Unlit/ShowUV"
 			fixed4 frag(v2f i) : SV_Target
 			{
 				fixed4 col = i.color;
-			return col;
+				return col;
 			}
 				ENDCG
 			}
@@ -136,15 +136,15 @@ Shader "Unlit/ShowUV"
 				{
 					float val = min(input.dist.x, min(input.dist.y, input.dist.z));
 
-				val = exp2(-1 / _Thickness * val * val);
+					val = exp2(-1 / _Thickness * val * val);
 
-				float4 transCol = _Color;
-				transCol.a = 0;
-				float4 col = val * _Color + (1 - val) * transCol;
+					float4 transCol = _Color;
+					transCol.a = 0;
+					float4 col = val * _Color + (1 - val) * transCol;
 
-				clip(col.a - 0.5f);
+					clip(col.a - 0.5f);
 
-				return val;
+					return col;
 				}
 
 				ENDCG
