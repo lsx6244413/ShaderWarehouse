@@ -43,7 +43,7 @@ Shader "Custom/ShowDots"
 				return output;
 			}
 			//step2
-			[maxvertexcount(4)]
+			/*[maxvertexcount(4)]
 			void GS_Main(triangle GS_INPUT p[3], inout PointStream<FS_INPUT> triStream)
 			{
 				for (int i = 0; i < 3; i++)
@@ -53,16 +53,16 @@ Shader "Custom/ShowDots"
 					pIn.tex0 = float2(0.0f, 0.0f);
 					triStream.Append(pIn);
 				}
-			}
+			}*/
 
-			/*[maxvertexcount(4)]
+			[maxvertexcount(4)]
 			void GS_Main(point GS_INPUT p[1], inout PointStream<FS_INPUT> triStream)
 			{
 				FS_INPUT pIn;
 				pIn.pos = UnityObjectToClipPos(p[0].pos);
 				pIn.tex0 = float2(0.0f, 0.0f);
 				triStream.Append(pIn);
-			}*/
+			}
 
 			//step3
 			float4 FS_Main(FS_INPUT input) : COLOR
