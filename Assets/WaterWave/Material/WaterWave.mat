@@ -71,7 +71,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _curWaveDis: 0.12691
+    - _curWaveDis: 0.17710993
     - _distanceFactor: 60
     - _timeFactor: -30
     - _totalFactor: 1

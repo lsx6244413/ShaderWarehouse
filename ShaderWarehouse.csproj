@@ -219,14 +219,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CommandBuffer\BlurryRefraction\CommandBufferBlurRefraction.cs" />
+    <Compile Include="Assets\CommandBuffer\DeferredCustomLights\CustomLight.cs" />
+    <Compile Include="Assets\CommandBuffer\DeferredCustomLights\CustomLightRenderer.cs" />
+    <Compile Include="Assets\CommandBuffer\DeferredDecals\Decal.cs" />
+    <Compile Include="Assets\CommandBuffer\DeferredDecals\DeferredDecalRenderer.cs" />
+    <Compile Include="Assets\CommandBuffer\DeferredDecals\PostEffectsBase.cs" />
+    <Compile Include="Assets\CommandBuffer\DeferredDecals\VideoBloom.cs" />
+    <Compile Include="Assets\CommandBuffer\DeferredDecals\VideoBloomEditor.cs" />
+    <Compile Include="Assets\CommonScript\Utility.cs" />
+    <Compile Include="Assets\DefferRender\Script\DefferRenderTest.cs" />
+    <Compile Include="Assets\FogEffect\Script\PostEffectFog.cs" />
     <Compile Include="Assets\ForceField\Script\RenderDepth.cs" />
+    <Compile Include="Assets\GeometryEffect\Script\TestScript2.cs" />
     <Compile Include="Assets\RenderDepthMap\Script\RenderDepthMap.cs" />
     <Compile Include="Assets\ScannerEffect\Script\ScannerEffect.cs" />
     <Compile Include="Assets\ScreenRot\Script\ScreenRot.cs" />
     <Compile Include="Assets\SeeThroughWall\Script\SceneMgr.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\CommandBuffer\BlurryRefraction\GlassWithoutGrab.shader" />
+    <None Include="Assets\CommandBuffer\BlurryRefraction\SeparableBlur.shader" />
+    <None Include="Assets\CommandBuffer\BlurryRefraction\_ReadMe.txt" />
+    <None Include="Assets\CommandBuffer\DeferredCustomLights\CustomLightShader.shader" />
+    <None Include="Assets\CommandBuffer\DeferredCustomLights\_ReadMe.txt" />
+    <None Include="Assets\CommandBuffer\DeferredDecals\DecalShaderDiffuseNormals.shader" />
+    <None Include="Assets\CommandBuffer\DeferredDecals\DecalShaderDiffuseOnly.shader" />
+    <None Include="Assets\CommandBuffer\DeferredDecals\DecalShaderNormalsOnly.shader" />
+    <None Include="Assets\CommandBuffer\DeferredDecals\VideoBloom.shader" />
+    <None Include="Assets\CommandBuffer\DeferredDecals\_ReadMe.txt" />
+    <None Include="Assets\DefferRender\Shader\DefferLight.shader" />
+    <None Include="Assets\FogEffect\Shader\AltitudeFog.shader" />
+    <None Include="Assets\FogEffect\Shader\PostEffectFog.shader" />
     <None Include="Assets\ForceField\Shader\ForceField.shader" />
+    <None Include="Assets\GeometryEffect\Shader\BunnyFurShader.shader" />
+    <None Include="Assets\GeometryEffect\Shader\ExplosionAnSandEffectShader.shader" />
+    <None Include="Assets\GeometryEffect\Shader\ShowBillbord.shader" />
+    <None Include="Assets\GeometryEffect\Shader\ShowPoint.shader" />
     <None Include="Assets\RenderDepthMap\Shader\RenderDepthMapShader.shader" />
     <None Include="Assets\ScannerEffect\Shader\ScannerEffect.shader" />
     <None Include="Assets\ScreenRot\Shader\ScreenRot.shader" />

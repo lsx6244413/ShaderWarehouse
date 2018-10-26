@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderWarehouse", "ShaderWarehouse.csproj", "{9E82FEA3-4299-098A-D20E-27D4D5729FAA}"
+# Visual Studio 2013
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderWarehouse.CSharp", "ShaderWarehouse.CSharp.csproj", "{398CE823-4265-678F-CD6E-D4C306963702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderWarehouse.CSharp.Editor", "ShaderWarehouse.CSharp.Editor.csproj", "{361514AD-1188-91DA-4B85-CDD6AB0C48F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9E82FEA3-4299-098A-D20E-27D4D5729FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E82FEA3-4299-098A-D20E-27D4D5729FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E82FEA3-4299-098A-D20E-27D4D5729FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E82FEA3-4299-098A-D20E-27D4D5729FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398CE823-4265-678F-CD6E-D4C306963702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398CE823-4265-678F-CD6E-D4C306963702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398CE823-4265-678F-CD6E-D4C306963702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398CE823-4265-678F-CD6E-D4C306963702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{361514AD-1188-91DA-4B85-CDD6AB0C48F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{361514AD-1188-91DA-4B85-CDD6AB0C48F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{361514AD-1188-91DA-4B85-CDD6AB0C48F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{361514AD-1188-91DA-4B85-CDD6AB0C48F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
